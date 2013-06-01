@@ -22,7 +22,7 @@ html
       document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//webfonts.creativecloud.com/open-sans:n4,n3,n7,n6:all.js" type="text/javascript">\x3C/script>');
 
   body
-    .clearfix
+    #page.clearfix
       // column
       #page_position_content.position_content
         #pu69.clearfix.colelem
@@ -78,62 +78,84 @@ html
                 #u222-4.MenuItemLabel.NoWrap.clearfix.grpelem
                   // content
                   p CALCULATOR
-    block content
-    #pu470.clearfix.colelem
-      // group
-      #u470.browser_width.grpelem
-        // group
-        #u470_align_to_page.clearfix
-          ul#menuu524.MenuBar.clearfix.grpelem
-            // row
-            li#u525.MenuItemContainer.clearfix.grpelem
-              // vertical box
-              a#u526.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/eligibility')
-                // horizontal box
-                #u529-4.MenuItemLabel.NoWrap.clearfix.grpelem
-                  // content
-                  p ELIGIBILITY
-          ul#menuu548.MenuBar.clearfix.grpelem
-            // row
-            li#u549.MenuItemContainer.clearfix.grpelem
-              // vertical box
-              a#u552.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/calculator')
-                // horizontal box
-                #u553-4.MenuItemLabel.NoWrap.clearfix.grpelem
-                  // content
-                  p CALCULATOR
-          ul#menuu476.MenuBar.clearfix.grpelem
-            // row
-            li#u477.MenuItemContainer.clearfix.grpelem
-              // vertical box
-              a#u480.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/apply')
-                // horizontal box
-                #u483-4.MenuItemLabel.NoWrap.clearfix.grpelem
-                  // content
-                  p APPLY
-          ul#menuu500.MenuBar.clearfix.grpelem
-            // row
-            li#u517.MenuItemContainer.clearfix.grpelem
-              // vertical box
-              a#u518.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/admin')
-                // horizontal box
-                #u521-4.MenuItemLabel.NoWrap.clearfix.grpelem
-                  // content
-                  p ADMIN
-    .verticalspacer
-      #pu472.clearfix.colelem
-        // group
-        #u472.shadow.browser_width.grpelem
+        block content
+        #pu470.clearfix.colelem
           // group
-          #u472_align_to_page.clearfix
-            #u474-4.clearfix.grpelem
+          #u470.browser_width.grpelem
+            // group
+            #u470_align_to_page.clearfix
+              ul#menuu524.MenuBar.clearfix.grpelem
+                // row
+                li#u525.MenuItemContainer.clearfix.grpelem
+                  // vertical box
+                  a#u526.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/eligibility')
+                    // horizontal box
+                    #u529-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                      // content
+                      p ELIGIBILITY
+              ul#menuu548.MenuBar.clearfix.grpelem
+                // row
+                li#u549.MenuItemContainer.clearfix.grpelem
+                  // vertical box
+                  a#u552.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/calculator')
+                    // horizontal box
+                    #u553-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                      // content
+                      p CALCULATOR
+              ul#menuu476.MenuBar.clearfix.grpelem
+                // row
+                li#u477.MenuItemContainer.clearfix.grpelem
+                  // vertical box
+                  a#u480.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/apply')
+                    // horizontal box
+                    #u483-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                      // content
+                      p APPLY
+              ul#menuu500.MenuBar.clearfix.grpelem
+                // row
+                li#u517.MenuItemContainer.clearfix.grpelem
+                  // vertical box
+                  a#u518.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/admin')
+                    // horizontal box
+                    #u521-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                      // content
+                      p ADMIN
+        .verticalspacer
+          #pu472.clearfix.colelem
+            // group
+            #u472.shadow.browser_width.grpelem
+              // group
+              #u472_align_to_page.clearfix
+                #u474-4.clearfix.grpelem
+                  // content
+                  p IT LIVES IN ALL OF US.
+            #u475-4.clearfix.grpelem
               // content
-              p IT LIVES IN ALL OF US.
-        #u475-4.clearfix.grpelem
-          // content
-          p
-            | © 2012 The Pittsburgh Promise  |  1901 Centre Avenue #204, Pittsburgh, PA 15219 | 412.281.7605
+              p
+                | © 2012 The Pittsburgh Promise  |  1901 Centre Avenue #204, Pittsburgh, PA 15219 | 412.281.7605
 
 
     script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js")
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
+
+    // muse JS includes
+    script(type='text/javascript')
+      if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+    script(type='text/javascript')
+      window.jQuery || document.write('\x3Cscript src="muse/scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+    script(src='muse/scripts/museutils.js?3992981318', type='text/javascript')
+    script(src='muse/scripts/jquery.tobrowserwidth.js?317228635', type='text/javascript')
+    script(src='muse/scripts/jquery.musemenu.js?3788803530', type='text/javascript')
+    script(src='muse/scripts/jquery.musepolyfill.bgsize.js?3956991090', type='text/javascript')
+    script(src='muse/scripts/jquery.watch.js?4068933136', type='text/javascript')
+    // Other scripts
+    script(type='text/javascript')
+      $(document).ready(function() { try {
+      Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+      $('.browser_width').toBrowserWidth();/* browser width elements */
+      Muse.Utils.prepHyperlinks();/* body */
+      Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+      Muse.Utils.fullPage('#page');/* 100% height page */
+      Muse.Utils.showWidgetsWhenReady();/* body */
+      Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+      } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
