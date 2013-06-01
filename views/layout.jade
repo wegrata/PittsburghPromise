@@ -1,23 +1,104 @@
-doctype 5
+!!! 5
 html
   head
     title= title
-    link(rel='stylesheet', href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css")
+    // link(rel='stylesheet', href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css")
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+
+    // from Muse
+    link(rel='stylesheet', type='text/css', href='muse/css/site_global.css?3837790900')
+    link(rel='stylesheet', type='text/css', href='muse/css/master_a-master.css?321155252')
+    link#pagesheet(rel='stylesheet', type='text/css', href='muse/css/index.css?19313289')
+    //if lt IE 9
+      link(rel='stylesheet', type='text/css', href='css/iefonts_index.css?4119836331')
+    // Other scripts
+    script(type='text/javascript')
+      document.documentElement.className += ' js';
+      var __adobewebfontsappname__ = "muse";
+    // JS includes
+    script(type='text/javascript')
+      document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//webfonts.creativecloud.com/open-sans:n4,n3,n7,n6:all.js" type="text/javascript">\x3C/script>');
+
   body
-    .navbar
-      .navbar-inner
-        a.brand(href="/") Pgh Promise
-        ul.nav
-          li
-            a(href="/about") About
-          li
-            a(href="/eligibility") Eligibility
-          li
-            a(href="/calculator") Calculator
-          li
-            a(href="/apply") Apply
-          li
-            a(href="/admin") Admin
+    .clearfix
+      // column
+      #page_position_content.position_content
+        #pu69.clearfix.colelem
+          // group
+          #u69.shadow.browser_width.grpelem
+            // group
+            #u69_align_to_page.clearfix
+              #u73.grpelem
+                // image
+                img#u73_img.block(src='muse/images/pghpromiselogo.png', alt='', width='297', height='35')
+          ul#menuu115.MenuBar.clearfix.grpelem
+            // row
+            li#u183.MenuItemContainer.clearfix.grpelem
+              // vertical box
+              a#u184.nonblock.nontext.MenuItem.MenuItemWithSubMenu.MuseMenuActive.clearfix.colelem(href='index.html')
+                // horizontal box
+                #u186-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                  // content
+                  p ABOUT
+          ul#menuu264.MenuBar.clearfix.grpelem
+            // row
+            li#u281.MenuItemContainer.clearfix.grpelem
+              // vertical box
+              a#u282.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/apply')
+                // horizontal box
+                #u283-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                  // content
+                  p APPLY
+          ul#menuu288.MenuBar.clearfix.grpelem
+            // row
+            li#u305.MenuItemContainer.clearfix.grpelem
+              // vertical box
+              a#u306.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/admin')
+                // horizontal box
+                #u307-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                  // content
+                  p ADMIN
+          ul#menuu192.MenuBar.clearfix.grpelem
+            // row
+            li#u209.MenuItemContainer.clearfix.grpelem
+              // vertical box
+              a#u210.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/eligibility')
+                // horizontal box
+                #u211-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                  // content
+                  p ELIGIBILITY
+          ul#menuu216.MenuBar.clearfix.grpelem
+            // row
+            li#u217.MenuItemContainer.clearfix.grpelem
+              // vertical box
+              a#u220.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/calculator')
+                // horizontal box
+                #u222-4.MenuItemLabel.NoWrap.clearfix.grpelem
+                  // content
+                  p CALCULATOR
     block content
     script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js")
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
+
+    // JS includes from Muse
+    script(type='text/javascript')
+      if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+    script(type='text/javascript')
+      window.jQuery || document.write('\x3Cscript src="muse/scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+    script(src='muse/scripts/museutils.js?3992981318', type='text/javascript')
+    script(src='muse/scripts/jquery.tobrowserwidth.js?317228635', type='text/javascript')
+    script(src='muse/scripts/jquery.musemenu.js?3788803530', type='text/javascript')
+    script(src='muse/scripts/jquery.musepolyfill.bgsize.js?3956991090', type='text/javascript')
+    script(src='muse/scripts/jquery.watch.js?4068933136', type='text/javascript')
+    // Other scripts
+    script(type='text/javascript')
+      $(document).ready(function() { try {
+      Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+      $('.browser_width').toBrowserWidth();/* browser width elements */
+      Muse.Utils.prepHyperlinks();/* body */
+      Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+      Muse.Utils.fullPage('#page');/* 100% height page */
+      Muse.Utils.showWidgetsWhenReady();/* body */
+      Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+      } catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});

@@ -4,61 +4,82 @@ block content
   h1= title
   
   form
-    .row
-      .span12
-        h3 STUDENT INFORMATION
-        p All information on both sides of the application must be completed.
-          | If any of the information below changes, you must notify The
-          | Pittsburgh Promise as soon as possible or your award may be
-          | delayed. If you have questions about this application, please refer
-          | to The Pittsburgh Promise website www.pittsburghpromise.org
-          | or call The Promise office at (412) 281-7605.
+    fieldset
+      legend Student Information
+      p All information on both sides of the application must be completed.
+        | If any of the information below changes, you must notify The
+        | Pittsburgh Promise as soon as possible or your award may be
+        | delayed. If you have questions about this application, please refer
+        | to The Pittsburgh Promise website www.pittsburghpromise.org
+        | or call The Promise office at (412) 281-7605.
+
+      label Name
+      input(type="text", placeholder="name")
+      label Email
+      input(type="email", placeholder="email")
+      label Address
+      input(type="text", placeholder="address")
+      label City
+      input(type="text", placeholder="city")
+      label State
+      input(type="text", placeholder="state")
+      label Zip
+      input(type="text", placeholder="zip")
+      label Home Phone
+      input(type="text", placeholder="home phone")
+      label Cell Phone
+      input(type="text", placeholder="cell phone")
+      span.help-block Your primary address and home telephone number on file with the Pittsburgh
+        | Public Schools (PPS) will be used to communicate with you about your eligibility
+        | for The Pittsburgh Promise. If you have recently changed address or telephone
+        | numbers, please contact your school to make sure that the correct information
+        | is on file.
+
+      label Last 4 digits of Social Security Number
+      input(type="text", placeholder="Last 4 digits of Social Security Number")
+      label Birthday
+      input(type="date")
+
+      label What grade did you first attend Pittsburgh Public School?
+      input(type="text", placeholder="")
+
+      label Have you attended continuously since then?
+      label.checkbox
+        input(type="checkbox", value="Yes") 
+        | Yes
+      label.checkbox
+        input(type="checkbox", value="No") 
+        | No
+      span.help-block If you wish to explain a break in residency or enrollment, please explain below.
+      textarea
+
+      label From which high school will you graduate?
+      input(type="text", placeholder="")
+      label When do you expect to graduate from high school?
+      input(type="date", placeholder="")
+      label Have you completed the FAFSA application?
+      label.radio
+        input(type="radio", name="fafsa", id="fafsa_no", value="no", checked)
+        | No
+      label.radio
+        input(type="radio", name="fafsa", id="fafsa_yes", value="yes")
+        | Yes
     
-    .row
-      .span6
-        input(type="text", placeholder="name")
-        input(type="email", placeholder="email")
-        input(type="text", placeholder="address")
-        input(type="text", placeholder="city")
-        input(type="text", placeholder="state")
-        input(type="text", placeholder="zip")
-        input(type="text", placeholder="home phone")
-        input(type="text", placeholder="cell phone")
-        p Your primary address and home telephone number on file with the Pittsburgh
-          | Public Schools (PPS) will be used to communicate with you about your eligibility
-          | for The Pittsburgh Promise. If you have recently changed address or telephone
-          | numbers, please contact your school to make sure that the correct information
-          | is on file.
-        input(type="text", placeholder="Last 4 digits of Social Security Number")
-        input(type="date", placeholder="Date of Birthday")
-        input(type="text", placeholder="What grade did you first attend Pittsburgh Public School")
+      span.help-block Note: The FAFSA can be completed after January 1 and should be completed no later
+        | than April 30. While both are required, you can apply for The Promise before submitting the FAFSA.
+        | List the Promise eligible schools to which you plan to apply:
 
-        p Have you attended continuously since then?
-        input(type="checkbox", value="Yes")
-        input(type="checkbox", value="No")
-        p If you wish to explain a break in residency or enrollment, please attach a letter
-          | with your application.
+      label List the Promise eligible schools to which you plan to apply:
+      input(type="text", placeholder="No. 1 (school/city)")
+      input(type="text", placeholder="No. 2 (school/city)")
+      input(type="text", placeholder="No. 3 (school/city)")
+      input(type="text", placeholder="No. 4 (school/city)")
+      input(type="text", placeholder="No. 5 (school/city)")
+      label When do you expect to graduate?
+      input(type="date")
 
-      .span6
-        input(type="text", placeholder="From which high school will you graduate?")
-        input(type="text", placeholder="When do you expect to graduate from high school? (m d y)")
-        input(type="text", placeholder="Have you completed the FAFSA application? yes no")
-        
-        p Note: The FAFSA can be completed after January 1 and should be completed no later
-          | than April 30. While both are required, you can apply for The Promise before submitting the FAFSA.
-          | List the Promise eligible schools to which you plan to apply:
-
-        h3 List the Promise eligible schools to which you plan to apply:
-        input(type="text", placeholder="No. 1 (school/city)")
-        input(type="text", placeholder="No. 1 (school/city)")
-        input(type="text", placeholder="No. 1 (school/city)")
-        input(type="text", placeholder="No. 1 (school/city)")
-        input(type="text", placeholder="No. 1 (school/city)")
-        input(type="date", placeholder="When do you expect to graduate?")
-
-    .row
-      .span6
-        h3 Authorization to Release Student Information
+    fieldset
+      legend Authorization to Release Student Information
         p My signature below indicates that I have read and understand the
           | terms of this scholarship and the information that I have provided
           | concerning residency and enrollment in the Pittsburgh Public Schools
@@ -69,19 +90,35 @@ block content
           | The Pittsburgh Promise to release information received from this
           | student’s education records to all Pittsburgh Promise eligible
           | schools.
-        input(type="text", placeholder="Student Signature")
-        input(type="text", placeholder="Date")
-        input(type="text", placeholder="Parent/Guardian/Caregiver")
-        input(type="text", placeholder="Date")
+        label Student Signature
+        input(type="text")
+        label Date
+        input(type="date")
+        label Parent/Guardian/Caregiver
+        input(type="text")
+        label Date
+        input(type="date")
         p Signature required if student is under 18 years of age.
-      .span6
-        h3 Parent/guardian/caregiver Information
-        p Only required if student is under 18 years of age.
-        input(type="text", placeholder="Parent/Guardian/Caregiver")
-        input(type="text", placeholder="Email address")
-        input(type="text", placeholder="Telephone")
-        input(type="text", placeholder="Address")
-        input(Type="text", placeholder="City State Zip")
 
-        button.btn.btn-large.btn-primary(type="submit") Submit Application
+    fieldset
+      legend Parent/guardian/caregiver Information
+        span.help-block Only required if student is under 18 years of age.
+        label Parent/Guardian/Caregiver
+        input(type="text")
+        label Email Address
+        input(type="text")
+        label Telephone
+        input(type="text")
+        label Address
+        input(type="text")
+        label City
+        input(Type="text")
+        label State
+        input(type="text")
+        label Zip
+        input(type="text")
+
+        br
+
+        button.btn(type="submit") Submit Application
 
