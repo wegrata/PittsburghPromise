@@ -14,21 +14,21 @@ block content
         | or call The Promise office at (412) 281-7605.
 
       label Name
-      input(type="text", placeholder="name")
+      input(type="text", name="name")
       label Email
-      input(type="email", placeholder="email")
+      input(type="email", name="email")
       label Address
-      input(type="text", placeholder="address")
+      input(type="text", name="address")
       label City
-      input(type="text", placeholder="city")
+      input(type="text", name="city")
       label State
-      input(type="text", placeholder="state")
+      input(type="text", name="state")
       label Zip
-      input(type="text", placeholder="zip")
+      input(type="text", name="zip")
       label Home Phone
-      input(type="text", placeholder="home phone")
+      input(type="text", name="home phone")
       label Cell Phone
-      input(type="text", placeholder="cell phone")
+      input(type="text", name="cell phone")
       span.help-block Your primary address and home telephone number on file with the Pittsburgh
         | Public Schools (PPS) will be used to communicate with you about your eligibility
         | for The Pittsburgh Promise. If you have recently changed address or telephone
@@ -36,27 +36,27 @@ block content
         | is on file.
 
       label Last 4 digits of Social Security Number
-      input(type="text", placeholder="Last 4 digits of Social Security Number")
+      input(type="text", name="4ssn")
       label Birthday
       input(type="date")
 
       label What grade did you first attend Pittsburgh Public School?
-      input(type="text", placeholder="")
+      input(type="text", name="grade")
 
       label Have you attended continuously since then?
       label.checkbox
-        input(type="checkbox", value="Yes") 
+        input(type="checkbox", name="continuous", value="Yes") 
         | Yes
       label.checkbox
-        input(type="checkbox", value="No") 
+        input(type="checkbox", name="continuous", value="No") 
         | No
       span.help-block If you wish to explain a break in residency or enrollment, please explain below.
       textarea
 
       label From which high school will you graduate?
-      input(type="text", placeholder="")
+      input(type="text", name="highschool")
       label When do you expect to graduate from high school?
-      input(type="date", placeholder="")
+      input(type="date", name="highschoolgraddate")
       label Have you completed the FAFSA application?
       label.radio
         input(type="radio", name="fafsa", id="fafsa_no", value="no", checked)
@@ -70,13 +70,13 @@ block content
         | List the Promise eligible schools to which you plan to apply:
 
       label List the Promise eligible schools to which you plan to apply:
-      input(type="text", placeholder="No. 1 (school/city)")
-      input(type="text", placeholder="No. 2 (school/city)")
-      input(type="text", placeholder="No. 3 (school/city)")
-      input(type="text", placeholder="No. 4 (school/city)")
-      input(type="text", placeholder="No. 5 (school/city)")
+      input(type="text", name="school1", placeholder="No. 1 (school/city)")
+      input(type="text", name="school2", placeholder="No. 2 (school/city)")
+      input(type="text", name="school3", placeholder="No. 3 (school/city)")
+      input(type="text", name="school4", placeholder="No. 4 (school/city)")
+      input(type="text", name="school5", placeholder="No. 5 (school/city)")
       label When do you expect to graduate?
-      input(type="date")
+      input(type="date", name="collegegraddate")
 
     fieldset
       legend Authorization to Release Student Information
@@ -91,32 +91,32 @@ block content
           | student’s education records to all Pittsburgh Promise eligible
           | schools.
         label Student Signature
-        input(type="text")
+        input(type="text", name="stusig")
         label Date
-        input(type="date")
+        input(type="date", name="stusigdate")
         label Parent/Guardian/Caregiver
-        input(type="text")
+        input(type="text", name="parsig")
         label Date
-        input(type="date")
+        input(type="date", name="parsigdate")
         p Signature required if student is under 18 years of age.
 
     fieldset
       legend Parent/guardian/caregiver Information
         span.help-block Only required if student is under 18 years of age.
         label Parent/Guardian/Caregiver
-        input(type="text")
+        input(type="text", name="parname")
         label Email Address
-        input(type="text")
+        input(type="text", name="paremail")
         label Telephone
-        input(type="text")
+        input(type="text", name="partel")
         label Address
-        input(type="text")
+        input(type="text", name="paradd")
         label City
-        input(Type="text")
+        input(Type="text", name="parcity")
         label State
-        input(type="text")
+        input(type="text", name="parstate")
         label Zip
-        input(type="text")
+        input(type="text", name="parzip")
 
         br
 
