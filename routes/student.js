@@ -25,13 +25,7 @@ function getStudentData(studentId, callback){
 }
 
 exports.eligibility = function(req, res){
-  StudentData(req.params.studentId, function(err, item){
-    if(err){
-        res.render("eligibility", {title: "Eligibility", error:"Invalid Student"});
-    }else{
-      res.render('eligibility', { title: 'Eligibility' , student: item});
-    }
-  });
+  res.render('eligibility', { title: 'Eligibility' });
 };
 
 exports.calculator = function(req, res){
