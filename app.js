@@ -40,8 +40,8 @@ app.get("/about", routes.about);
 app.get('/users', user.list);
 
 app.get("/apply", student.apply);
-app.get("/calculator/:studentId", student.calculator);
-app.post("/calculator/:studentId", student.calculator);
+app.get("/calculator", student.calculator);
+app.post("/calculate", student.calculate);
 app.get("/eligibility/:studentId", student.eligibility);
 
 app.get("/admin", admin.admin);
