@@ -37,18 +37,9 @@ exports.eligibility = function(req, res){
 exports.calculator = function(req, res){
     res.render('calculator', { title: 'Calculate Student Cost', studentId: req.params.studentId});
 };
-
-exports.calculate = function(req, res){
-  var tuition = parseFloat(req.body.tuition);
-  var board = parseFloat(req.body.board);
-  var books = parseFloat(req.body.books);
-  var totalCost = tuition + board + books;
-  var government = parseFloat(req.body.government);
-  var institutional = parseFloat(req.body.institutional);
-  var scholarship = parseFloat(req.body.scholarship);
-  var totalAid = government + institutional + scholarship;
+function calculateContributionForYears(years){
   var promiseContribution = 0;
-  switch (parseInt(req.body.years)){
+  switch (parseInt(years)){
     case 4:
       promiseContribution = 10000;
       break;
@@ -64,9 +55,26 @@ exports.calculate = function(req, res){
     default:
       promiseContribution = 0;
       break;
-  }
+  }  
+  return promiseContribution;
+}
+exports.calculate = function(req, res){
+  var tuition = parseFloat(req.body.tuition);
+  var board = parseFloat(req.body.board);
+  var books = parseFloat(req.body.books);
+  var totalCost = tuition + board + books;
+  var government = parseFloat(req.body.government);
+  var institutional = parseFloat(req.body.institutional);
+  var scholarship = parseFloat(req.body.scholarship);
+  var totalAid = government + institutional + scholarship;
+  var promiseContribution = calculateContributionForYears(req.body.years);
   var unmetNeed = totalCost - totalAid;
-  if (promiseContribution > unmetNeed){
+  console.log(unmetNeed - promiseContribution);
+  if((unmetNeed - promiseContribution) < 1000 ){
+    promiseContribution = 1000;
+    unmetNeed -= 1000;
+  }
+  else if (promiseContribution > unmetNeed){
     promiseContribution = unmetNeed;
   }else{
     unmetNeed -= promiseContribution;
