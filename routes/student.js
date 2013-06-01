@@ -7,6 +7,6 @@ exports.calculator = function(req, res){
 };
 
 exports.apply = function(req, res){
-    res.render('apply', { title: 'Express' });
+    res.render('apply', { title: 'Scholarship Application' });
 };
 

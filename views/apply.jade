@@ -2,3 +2,86 @@ extends layout
 
 block content
   h1= title
+  
+  form
+    .row
+      .span12
+        h3 STUDENT INFORMATION
+        p All information on both sides of the application must be completed.
+          | If any of the information below changes, you must notify The
+          | Pittsburgh Promise as soon as possible or your award may be
+          | delayed. If you have questions about this application, please refer
+          | to The Pittsburgh Promise website www.pittsburghpromise.org
+          | or call The Promise office at (412) 281-7605.
+    
+    .row
+      .span6
+        input(type="text", placeholder="name")
+        input(type="email", placeholder="email")
+        input(type="text", placeholder="address")
+        input(type="text", placeholder="city")
+        input(type="text", placeholder="state")
+        input(type="text", placeholder="zip")
+        input(type="text", placeholder="home phone")
+        input(type="text", placeholder="cell phone")
+        p Your primary address and home telephone number on file with the Pittsburgh
+          | Public Schools (PPS) will be used to communicate with you about your eligibility
+          | for The Pittsburgh Promise. If you have recently changed address or telephone
+          | numbers, please contact your school to make sure that the correct information
+          | is on file.
+        input(type="text", placeholder="Last 4 digits of Social Security Number")
+        input(type="date", placeholder="Date of Birthday")
+        input(type="text", placeholder="What grade did you first attend Pittsburgh Public School")
+
+        p Have you attended continuously since then?
+        input(type="checkbox", value="Yes")
+        input(type="checkbox", value="No")
+        p If you wish to explain a break in residency or enrollment, please attach a letter
+          | with your application.
+
+      .span6
+        input(type="text", placeholder="From which high school will you graduate?")
+        input(type="text", placeholder="When do you expect to graduate from high school? (m d y)")
+        input(type="text", placeholder="Have you completed the FAFSA application? yes no")
+        
+        p Note: The FAFSA can be completed after January 1 and should be completed no later
+          | than April 30. While both are required, you can apply for The Promise before submitting the FAFSA.
+          | List the Promise eligible schools to which you plan to apply:
+
+        h3 List the Promise eligible schools to which you plan to apply:
+        input(type="text", placeholder="No. 1 (school/city)")
+        input(type="text", placeholder="No. 1 (school/city)")
+        input(type="text", placeholder="No. 1 (school/city)")
+        input(type="text", placeholder="No. 1 (school/city)")
+        input(type="text", placeholder="No. 1 (school/city)")
+        input(type="date", placeholder="When do you expect to graduate?")
+
+    .row
+      .span6
+        h3 Authorization to Release Student Information
+        p My signature below indicates that I have read and understand the
+          | terms of this scholarship and the information that I have provided
+          | concerning residency and enrollment in the Pittsburgh Public Schools
+          | (PPS) is true and correct to the best of my knowledge. My signature
+          | authorizes the School District of Pittsburgh to release information
+          | from this student’s education records to The Pittsburgh Promise
+          | for the purpose of determining scholarship eligibility. I authorize
+          | The Pittsburgh Promise to release information received from this
+          | student’s education records to all Pittsburgh Promise eligible
+          | schools.
+        input(type="text", placeholder="Student Signature")
+        input(type="text", placeholder="Date")
+        input(type="text", placeholder="Parent/Guardian/Caregiver")
+        input(type="text", placeholder="Date")
+        p Signature required if student is under 18 years of age.
+      .span6
+        h3 Parent/guardian/caregiver Information
+        p Only required if student is under 18 years of age.
+        input(type="text", placeholder="Parent/Guardian/Caregiver")
+        input(type="text", placeholder="Email address")
+        input(type="text", placeholder="Telephone")
+        input(type="text", placeholder="Address")
+        input(Type="text", placeholder="City State Zip")
+
+        button.btn.btn-large.btn-primary(type="submit") Submit Application
+
