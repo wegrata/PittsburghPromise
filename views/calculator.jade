@@ -1,35 +1,55 @@
 extends layout
 
 block content
-  h1= title
-  form(method="POST", action="/calculate")
-    label(for="years") Years In Pittsburgh Public Schools      
-    select(name="years").years
-      option(value="1", selected=true) Kindergarden
-      option(value="0") 10th - 12th Grade
-      option(value="0.75") 9th Grade
-      option(value="0.85") 6th - 8th Grade
-      option(value="0.95") 1st - 5th Grade
-    h3 Expenses
-    div.control-group
-      label(for="tuition") Tuition and Fees
-      input(type="text", name="tuition", value=0)#tuition
-    div.control-group
-      label(for="board") Room and Board
-      input(type="text", name="board", value=0)#board      
-    div.control-group
-      label(for="books") Books
-      input(type="text", name="books", value=0)#books
-    h3 Student Aid
-    div.control-group
-      label(for="government") Government
-      input(type="text", name="government", value=0)#government
-    div.control-group
-      label(for="institutional") Institutional Aid
-      input(type="text", name="institutional", value=0)#institutional
-    div.control-group
-      label(for="scholarship") Scholarships
-      input(type="text", name="scholarship", value=0)#scholarship        
-    div.control-group
-      input(type="submit", value="Calculate")#submit.btn
-    script(src="/js/validate.js")
+  link(rel='stylesheet', type='text/css', href='/css/calculator.css')
+
+  #calculator
+    h1= title
+    form(method="POST", action="/calculate")
+
+      h3 
+        div Years in 
+            abbrev PPS
+      label(for="years") In Pittsburgh Public Schools since
+      select(name="years").years
+        option(value="1", selected=true) Kindergarten
+        option(value="0.95") 1st Grade
+        option(value="0.95") 2nd Grade
+        option(value="0.95") 3rd Grade
+        option(value="0.95") 4th Grade
+        option(value="0.95") 5th Grade
+        option(value="0.85") 6th Grade
+        option(value="0.85") 7th Grade
+        option(value="0.85") 8th Grade
+        option(value="0.75") 9th Grade
+        option(value="0") 10th Grade
+        option(value="0") 11th Grade
+        option(value="0") 12th Grade
+      .clear
+  
+      h3 
+        div College Expenses
+      .control-group
+        label(for="tuition") Tuition and Fees
+        input(type="text", name="tuition", value=0)#tuition
+      .control-group
+        label(for="board") Room and Board
+        input(type="text", name="board", value=0)#board      
+      .control-group
+        label(for="books") Books
+        input(type="text", name="books", value=0)#books
+  
+      h3 
+        div Student Aid
+      .control-group
+        label(for="government") Government
+        input(type="text", name="government", value=0)#government
+      .control-group
+        label(for="institutional") Institutional Aid
+        input(type="text", name="institutional", value=0)#institutional
+      .control-group
+        label(for="scholarship") Scholarships
+        input(type="text", name="scholarship", value=0)#scholarship        
+      .control-group.submit
+        input(type="submit", value="Calculate")#submit.btn
+      script(src="/js/validate.js")
