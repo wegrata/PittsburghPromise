@@ -36,6 +36,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get("/about", routes.about);
 app.get('/users', user.list);
+app.get('/app_form', routes.app_form);
 
 app.get("/apply", student.apply);
 app.get("/calculator", student.calculator);

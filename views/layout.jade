@@ -3,6 +3,21 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
   body
+    .navbar
+      .navbar-inner
+        a.brand(href="#") Pgh Promise
+        ul.nav
+          li.active
+            a(href="#") About
+          li
+            a(href="#") Eligibility
+          li
+            a(href="#") Calculator
+          li
+            a(href="#") Calculator
+          li
+            a(href="#") Admin
     block content
+    script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js")
+    script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")

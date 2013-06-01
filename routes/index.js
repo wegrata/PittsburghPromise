@@ -1,7 +1,3 @@
-var app = require("../app")
-  , mongo = require("mongodb")
-  , Connection = require("mongodb").Connection
-  , Server = require("mongodb").Server;
 
 /*
  * GET home page.
@@ -9,11 +5,8 @@ var app = require("../app")
 
 
 exports.index = function(req, res){
-  console.log(app.app.settings.dsn);
   res.render('index', { title: 'Express' });
 };
-
-exports.about = function(req, res){
-
+exports.app_form = function(req, res){
+  res.render('app_form', { title: 'Express' });
 };
-
