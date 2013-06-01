@@ -38,25 +38,9 @@ exports.calculator = function(req, res){
     res.render('calculator', { title: 'Calculate Student Cost', studentId: req.params.studentId});
 };
 function calculateContributionForYears(years){
-  var promiseContribution = 0;
-  switch (parseInt(years)){
-    case 4:
-      promiseContribution = 10000;
-      break;
-    case 3:
-      promiseContribution = 9500;
-      break;
-    case 2:
-      promiseContribution = 8500;
-      break;
-    case 1:
-      promiseContribution = 7500;
-      break;
-    default:
-      promiseContribution = 0;
-      break;
-  }  
-  return promiseContribution;
+  var promiseContribution = 10000;
+  var percent = parseFloat(years);
+  return promiseContribution * percent;
 }
 exports.calculate = function(req, res){
   var tuition = parseFloat(req.body.tuition);
@@ -70,7 +54,10 @@ exports.calculate = function(req, res){
   var promiseContribution = calculateContributionForYears(req.body.years);
   var unmetNeed = totalCost - totalAid;
   console.log(unmetNeed - promiseContribution);
-  if((unmetNeed - promiseContribution) < 1000 ){
+  if(unmetNeed === 0){
+    promiseContribution = 0;
+  }
+  else if((unmetNeed - promiseContribution) < 1000 && (unmetNeed - promiseContribution) > 0){
     promiseContribution = 1000;
     unmetNeed -= 1000;
   }
