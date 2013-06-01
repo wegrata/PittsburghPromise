@@ -33,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+
 app.get('/', routes.index);
 app.get("/about", routes.about);
 app.get('/users', user.list);
