@@ -39,10 +39,46 @@ exports.calculator = function(req, res){
 };
 
 exports.calculate = function(req, res){
-  res.render('calculate', { title: 'Calculate Student Cost', promiseContribution: 1000, studentContribution: 0});
+  var tuition = parseFloat(req.body.tuition);
+  var board = parseFloat(req.body.board);
+  var books = parseFloat(req.body.books);
+  var totalCost = tuition + board + books;
+  var government = parseFloat(req.body.government);
+  var institutional = parseFloat(req.body.institutional);
+  var scholarship = parseFloat(req.body.scholarship);
+  var totalAid = government + institutional + scholarship;
+  var promiseContribution = 0;
+  switch (parseInt(req.body.years)){
+    case 4:
+      promiseContribution = 10000;
+      break;
+    case 3:
+      promiseContribution = 9500;
+      break;
+    case 2:
+      promiseContribution = 8500;
+      break;
+    case 1:
+      promiseContribution = 7500;
+      break;
+    default:
+      promiseContribution = 0;
+      break;
+  }
+  var unmetNeed = totalCost - totalAid;
+  if (promiseContribution > unmetNeed){
+    promiseContribution = unmetNeed;
+  }else{
+    unmetNeed -= promiseContribution;
+  }
+  res.render('calculate', { title: 'Calculate Student Cost',
+                            totalCost: totalCost,
+                            promiseContribution: promiseContribution,
+                            studentContribution: unmetNeed
+                          });
 };
 
 exports.apply = function(req, res){
-    res.render('apply', { title: 'Express' });
+    res.render('apply', { title: 'Scholarship Application' });
 };
 
