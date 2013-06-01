@@ -1,4 +1,7 @@
+var app = require("../app").App;
+
 exports.eligibility = function(req, res){
+	console.log(app);
     res.render('eligibility', { title: 'Express' });
 };
 

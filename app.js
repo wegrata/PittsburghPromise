@@ -16,7 +16,7 @@ var express = require('express')
 
 
 var app = express();
-module.exports.app = app;
+module.exports.App = app;
 // all environments
 app.set("dsn", process.env.MONGOHQ_URL || "mongodb://localhost/pghpromise");
 app.set('port', process.env.PORT || 3000);
