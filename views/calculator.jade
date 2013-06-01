@@ -2,8 +2,27 @@ extends layout
 
 block content
   h1= title
-  
-  form
-    h2 Scholarship Application
-    input(type="text")
-    button.btn.btn-large.btn-primary(type="submit") Submit Application
+
+  form(method="POST")
+    h2 Expenses
+    div
+      label(for="tuition") Tuition and Fees
+      input(type="text", name="tuition").tuition
+    div
+      label(for="tuition") Room and Board
+      input(type="text", name="tuition").board      
+    div
+      label(for="tuition") Books
+      input(type="text", name="tuition").books
+    h2 Student Aid
+    div
+      label(for="tuition") Government
+      input(type="text", name="tuition").government
+    div
+      label(for="tuition") Institutional Aid
+      input(type="text", name="tuition").institutional
+    div
+      label(for="tuition") Scholarships
+      input(type="text", name="tuition").scholarship        
+    div
+      input(type="submit") Calculate
