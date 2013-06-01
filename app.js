@@ -42,7 +42,7 @@ app.get('/app_form', routes.app_form);
 
 app.get("/apply", student.apply);
 app.get("/calculator/:studentId", student.calculator);
-app.post("/calculator/:studentId", student.calculator);
+app.post("/calculate/:studentId", student.calculate);
 app.get("/eligibility/:studentId", student.eligibility);
 
 app.get("/admin", admin.admin);

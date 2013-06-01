@@ -2,26 +2,26 @@ extends layout
 
 block content
   h1= title
-  form(method="POST")
+  form(method="POST", action="/calculate/#{studentId}")
     h2 Expenses
     div
       label(for="tuition") Tuition and Fees
-      input(type="text", name="tuition").tuition
+      input(type="text", name="tuition", value=0).tuition
     div
       label(for="tuition") Room and Board
-      input(type="text", name="tuition").board      
+      input(type="text", name="tuition", value=0).board      
     div
       label(for="tuition") Books
-      input(type="text", name="tuition").books
+      input(type="text", name="tuition", value=0).books
     h2 Student Aid
     div
       label(for="tuition") Government
-      input(type="text", name="tuition").government
+      input(type="text", name="tuition", value=0).government
     div
       label(for="tuition") Institutional Aid
-      input(type="text", name="tuition").institutional
+      input(type="text", name="tuition", value=0).institutional
     div
       label(for="tuition") Scholarships
-      input(type="text", name="tuition").scholarship        
+      input(type="text", name="tuition", value=0).scholarship        
     div
       input(type="submit") Calucalte
