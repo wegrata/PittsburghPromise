@@ -19,6 +19,7 @@ var app = express();
 module.exports.App = app;
 // all environments
 app.set("dsn", process.env.MONGOHQ_URL || "mongodb://localhost/pghpromise");
+app.set("collection", "student");
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -41,7 +42,7 @@ app.get('/app_form', routes.app_form);
 
 app.get("/apply", student.apply);
 app.get("/calculator", student.calculator);
-app.get("/eligibility", student.eligibility);
+app.get("/eligibility/:studentId", student.eligibility);
 
 app.get("/admin", admin.admin);
 http.createServer(app).listen(app.get('port'), function(){
