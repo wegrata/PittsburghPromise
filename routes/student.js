@@ -29,7 +29,9 @@ exports.eligibility = function(req, res){
 exports.calculator = function(req, res){
     res.render('calculator', { title: 'Express' });
 };
-
+exports.calculate = function(req, res){
+    
+}
 exports.apply = function(req, res){
     res.render('apply', { title: 'Express' });
 };
