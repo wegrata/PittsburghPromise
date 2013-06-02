@@ -70,11 +70,14 @@ block content
       .control-group
         label(for="books") Books
         input(type="text", name="books", value=0)#books
+      .control-group
+        label Total Cost
+        span#total
 
       h3
         div Yearly Student Aid
       .control-group
-        label(for="government") Government
+        label(for="government") Government Aid
         input(type="text", name="government", value=0)#government
       .control-group
         label(for="institutional") Institutional Aid
@@ -82,18 +85,19 @@ block content
       .control-group
         label(for="scholarship") Scholarships
         input(type="text", name="scholarship", value=0)#scholarship
+      .control-group
+        label Unmet Need 
+        span#total
 
       h3
         div Yearly Award
       .control-group
-        label Total Cost
-        span#total
-      .control-group
-        label We'll Give You
+        label Promise Pays
         span#give
       .control-group
-        label You Still Need
+        label You Owe
         span#owe
+      button#submit Calculate
 
     #examples
       h5 Examples
@@ -177,4 +181,4 @@ block content
 
     .clear
 
-  script(src="/js/validate.js")
+  script(src="/js/validate.js").
