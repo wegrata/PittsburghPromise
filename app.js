@@ -41,7 +41,6 @@ app.get('/users', user.list);
 
 app.get("/apply", student.apply);
 app.get("/calculator", student.calculator);
-app.post("/calculate", student.calculate);
 app.get("/eligibility", student.eligibility);
 
 app.get("/admin", admin.admin);

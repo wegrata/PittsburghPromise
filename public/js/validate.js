@@ -1,11 +1,46 @@
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
+function calculateContributionForYears(years){
+  var promiseContribution = 10000;
+  var percent = parseFloat(years);
+  return promiseContribution * percent;
+}
+function calculate(data){
+  var tuition = parseFloat(data.tuition);
+  var board = parseFloat(data.board);
+  var books = parseFloat(data.books);
+  var totalCost = tuition + board + books;
+  var government = parseFloat(data.government);
+  var institutional = parseFloat(data.institutional);
+  var scholarship = parseFloat(data.scholarship);
+  var totalAid = government + institutional + scholarship;
+  var promiseContribution = calculateContributionForYears(data.years);
+  var unmetNeed = totalCost - totalAid;
+  console.log(promiseContribution);
+  if(unmetNeed === 0){
+    promiseContribution = 0;
+  }
+  else if((unmetNeed - promiseContribution) < 1000 && (unmetNeed - promiseContribution) > 0){
+    promiseContribution = 1000;
+    unmetNeed -= 1000;
+  }
+  else if (promiseContribution > unmetNeed){
+    promiseContribution = unmetNeed;
+  }else{
+    unmetNeed -= promiseContribution;
+  }
+  return {
+            totalCost: totalCost,
+            promiseContribution: promiseContribution,
+            studentContribution: unmetNeed
+          };
+}
 $(document).ready(function(){
 	var textFields = $(":text");
 	$("#submit").click(function(){
 		console.log($("#years").val());
-		$.post("/calculate",
+		var result = calculate(
 		{
 			tuition: $("#tuition").val(),
 			board: $("#board").val(),
@@ -14,12 +49,10 @@ $(document).ready(function(){
 			institutional: $("#institutional").val(),
 			scholarship: $("#scholarship").val(),
 			years: $("#years").val()
-		}
-		).done(function(data){
-			$("#total").html(data.totalCost);
-			$("#give").html(data.promiseContribution);
-			$("#owe").html(data.studentContribution);
 		});
+		$("#total").html(result.totalCost);
+		$("#give").html(result.promiseContribution);
+		$("#owe").html(result.studentContribution);
 	});
 	textFields.bind("keyup", function(e){
 		$("#submit").attr("disabled", null);
