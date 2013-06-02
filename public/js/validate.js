@@ -58,10 +58,10 @@ $(document).ready(function(){
 	var textFields = $(":text");
 	textFields.bind("keyup", function(e){
 		if(isNumber($(this).val())){
-			$(this).parent().removeClass("error");
+			$(this).parent().parent().removeClass("error");
 			pullDataAndCalculate();
 		}else{
-			$(this).parent().addClass("error");
+			$(this).parent().parent().addClass("error");
 		}
 	});
 });
