@@ -27,6 +27,9 @@ function SendMessage(phoneNumber, callback) {
   // Build the post string from an object
   var client = new twilio.RestClient("AC629eef76b6354f1f459e6c1b7e34c1bd",
                                  "925c200da23c92aefbc0dc741a03a9ae");
+  if (!phoneNumber[0] !== "1"){
+    phoneNumber = "1" + phoneNumber;
+  }
   client.sendSms({
      to: '+'+phoneNumber,
      from: '+17245364880',
