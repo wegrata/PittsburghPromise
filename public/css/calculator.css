@@ -83,12 +83,20 @@ label {
     display: block;
     padding-top: 4px;
 }
-input {
+.amount {
     position: absolute;
     top: 0;
     left: 176px;
     width: 50px;
     text-align: right;
+}
+.amount input {
+    width: 50px;
+    text-align: right;
+}
+.amount.calculated {
+    width: 57px;
+    padding-top: 4px;
 }
 select {
     width: 120px;

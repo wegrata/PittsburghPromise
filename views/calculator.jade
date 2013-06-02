@@ -63,40 +63,46 @@ block content
         div Yearly College Expenses
       .control-group
         label(for="tuition") Tuition and Fees
-        input(type="text", name="tuition", value=0)#tuition
+        .amount
+          input(type="text", name="tuition", value=0)#tuition
       .control-group
         label(for="board") Room and Board
-        input(type="text", name="board", value=0)#board
+        .amount
+          input(type="text", name="board", value=0)#board
       .control-group
         label(for="books") Books
-        input(type="text", name="books", value=0)#books
+        .amount
+          input(type="text", name="books", value=0)#books
       .control-group
         label Total Cost
-        span#total
+        #total.amount.calculated 0
 
       h3
         div Yearly Student Aid
       .control-group
         label(for="government") Government Aid
-        input(type="text", name="government", value=0)#government
+        .amount
+          input(type="text", name="government", value=0)#government
       .control-group
         label(for="institutional") Institutional Aid
-        input(type="text", name="institutional", value=0)#institutional
+        .amount
+          input(type="text", name="institutional", value=0)#institutional
       .control-group
         label(for="scholarship") Scholarships
-        input(type="text", name="scholarship", value=0)#scholarship
+        .amount
+          input(type="text", name="scholarship", value=0)#scholarship
       .control-group
         label Unmet Need
-        span#unmet
+          #unmet.amount.calculated 0
 
       h3
         div Yearly Award
       .control-group
         label Promise Pays
-        span#give
+        #give.amount.calculated 0
       .control-group
         label You Owe
-        span#owe
+        #owe.amount.calculated 0
 
     #examples
       h5 Examples
