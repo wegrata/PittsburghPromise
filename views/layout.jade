@@ -110,11 +110,11 @@ html
                 // row
                 li#u517.MenuItemContainer.clearfix.grpelem
                   // vertical box
-                  a#u518.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/admin')
+                  a#u518.nonblock.nontext.MenuItem.MenuItemWithSubMenu.clearfix.colelem(href='/subscribe')
                     // horizontal box
                     #u521-4.MenuItemLabel.NoWrap.clearfix.grpelem
                       // content
-                      p ADMIN
+                      p SUBSCRIBE
         .verticalspacer
           #pu472.clearfix.colelem
             // group
@@ -134,9 +134,9 @@ html
     script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
 
     // muse JS includes
-    script(type='text/javascript')
+    script(type='text/javascript').
       if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-    script(type='text/javascript')
+    script(type='text/javascript').
       window.jQuery || document.write('\x3Cscript src="muse/scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
     script(src='muse/scripts/museutils.js?3992981318', type='text/javascript')
     script(src='muse/scripts/jquery.tobrowserwidth.js?317228635', type='text/javascript')
@@ -144,7 +144,7 @@ html
     script(src='muse/scripts/jquery.musepolyfill.bgsize.js?3956991090', type='text/javascript')
     script(src='muse/scripts/jquery.watch.js?4068933136', type='text/javascript')
     // Other scripts
-    script(type='text/javascript')
+    script(type='text/javascript').
       $(document).ready(function() { try {
       Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
       $('.browser_width').toBrowserWidth();/* browser width elements */
