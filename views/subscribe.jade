@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Subscribe For Notifications
+  form(action="/subscribe", method="POST")
+    .control-group
+      input(name="phoneNumber", type="text")#phoneNumber
+      input(type="submit", value="Subscribe").btn
