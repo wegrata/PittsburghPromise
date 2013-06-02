@@ -1397,3 +1397,24 @@ html
 	clear: both;
 }
 
+
+/* subscribe form (yes, a hack for it to be here) */
+
+#subscribe-form {
+    text-align: center;
+    padding: 100px 0;
+}
+#subscribe-form label {
+	font: 700 64px/64px open-sans, sans-serif;
+    color: white;
+}
+#subscribe-form input#phoneNumber {
+	font: 300 64px/64px open-sans, sans-serif;
+    height: 80px;
+    width: 480px;
+    margin: 20px 0;
+    text-align: center;
+}
+#subscribe-form input#subscribeButton {
+	font: 300 48px/48px open-sans, sans-serif;
+}
