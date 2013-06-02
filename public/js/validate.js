@@ -36,36 +36,30 @@ function calculate(data){
             studentContribution: unmetNeed
           };
 }
+function pullDataAndCalculate(){
+	var result = calculate(
+	{
+		tuition: $("#tuition").val(),
+		board: $("#board").val(),
+		books: $("#books").val(),
+		government: $("#government").val(),
+		institutional: $("#institutional").val(),
+		scholarship: $("#scholarship").val(),
+		years: $("#years").val()
+	});
+	$("#total").html(result.totalCost);
+	$("#give").html(result.promiseContribution);
+	$("#owe").html(result.studentContribution);
+}
 $(document).ready(function(){
 	var textFields = $(":text");
-	$("#submit").click(function(){
-		console.log($("#years").val());
-		var result = calculate(
-		{
-			tuition: $("#tuition").val(),
-			board: $("#board").val(),
-			books: $("#books").val(),
-			government: $("#government").val(),
-			institutional: $("#institutional").val(),
-			scholarship: $("#scholarship").val(),
-			years: $("#years").val()
-		});
-		$("#total").html(result.totalCost);
-		$("#give").html(result.promiseContribution);
-		$("#owe").html(result.studentContribution);
-	});
 	textFields.bind("keyup", function(e){
-		$("#submit").attr("disabled", null);
-		textFields.each(function(){
-			console.log($(this).val());
-			if(!isNumber($(this).val())){
-				$("#submit").attr("disabled", "disbled");
-				$(this).parent().addClass("error");
-			}else{
-				$(this).parent().removeClass("error");
-			}
-		});
-
+		if(isNumber($(this).val())){
+			$(this).parent().removeClass("error");
+			pullDataAndCalculate();
+		}else{
+			$(this).parent().addClass("error");
+		}
 	});
 });
 
