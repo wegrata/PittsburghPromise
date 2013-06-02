@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  h1(style="padding-top:50px;") Subscribe For Notifications
+  h1(style="padding-top:50px;") Pittsburgh Promise Reminders
   form(action="/subscribe", method="POST")
     .control-group
+      label(for="phoneNumber") What's your cell?
       input(name="phoneNumber", type="text")#phoneNumber
       input(type="submit", value="Subscribe").btn
