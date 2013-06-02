@@ -42,10 +42,13 @@ h4 div {
 #prose {
     width: 460px;
     text-align: left;
-    margin: 0 auto;
+    margin: 40px auto;
+    color: white;
+    font: normal 18px/28px open sans, sans-serif;
 }
 #prose table {
     margin: 20px 0 20px 50px;
+    font-weight: bold;
 }
 #prose .perc {
     text-align: right;
