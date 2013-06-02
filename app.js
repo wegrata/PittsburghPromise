@@ -49,15 +49,7 @@ app.get("/eligibility", student.eligibility);
 
 
 app.get("/admin", admin.admin);
-mongodb.connect(dsn, function(err, conn){
-  if(err){
-    console.log(err);
-  }else{
-    app.settings.db = conn;
-    http.createServer(app).listen(app.get('port'), function(){
-      console.log('Express server listening on port ' + app.get('port'));
-    });
-  }
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });
-
 
