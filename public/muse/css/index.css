@@ -193,12 +193,12 @@ html
 	margin: 0px -10000px 0px 0px;
 }
 
-#menuu192
+#menuu192 /* eligibility */
 {
 	z-index: 157;
 	width: 98px;
 	margin-right: -10000px;
-	left: 706px;
+	left: 819px;
 }
 
 #u209
@@ -253,7 +253,7 @@ html
 	z-index: 164;
 	width: 113px;
 	margin-right: -10000px;
-	left: 804px;
+	left: 706px;
 }
 
 #u217
@@ -866,7 +866,7 @@ html
 	width: 98px;
 	position: relative;
 	margin-right: -10000px;
-	left: 418px;
+	left: 531px;
 }
 
 #u525
@@ -948,7 +948,7 @@ html
 	width: 113px;
 	position: relative;
 	margin-right: -10000px;
-	left: 516px;
+	left: 418px;
 }
 
 #u549
