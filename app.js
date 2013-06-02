@@ -18,8 +18,7 @@ var express = require('express')
 var app = express();
 module.exports.App = app;
 // all environments
-app.set("dsn", process.env.MONGOHQ_URL || "mongodb://localhost/pghpromise");
-app.set("collection", "student");
+var dsn = process.env.MONGOHQ_URL || "mongodb://localhost/pghpromise";
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -37,14 +36,28 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get("/about", routes.about);
+app.get("/subscribe", routes.subscribe);
+app.post("/subscribe", routes.subscribeToAlert);
+
 app.get('/users', user.list);
+
 
 app.get("/apply", student.apply);
 app.get("/calculator", student.calculator);
 app.get("/eligibility", student.eligibility);
 
+
+
 app.get("/admin", admin.admin);
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+mongodb.connect(dsn, function(err, conn){
+  if(err){
+    console.log(err);
+  }else{
+    app.settings.db = conn;
+    http.createServer(app).listen(app.get('port'), function(){
+      console.log('Express server listening on port ' + app.get('port'));
+    });
+  }
 });
+
 
