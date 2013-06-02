@@ -10,5 +10,6 @@ node_modules
 pids
 logs
 results
-
+Procfile
 npm-debug.log
+.env
