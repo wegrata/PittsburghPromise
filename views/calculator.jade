@@ -4,7 +4,7 @@ block content
   link(rel='stylesheet', type='text/css', href='/css/calculator.css')
 
   #calculator
-    
+
     h1
       div= title
 
@@ -13,36 +13,36 @@ block content
       | We'll pay for a percentage of qualifying expenses (less student aid)
       | each year for four years of college, based on how long you went to
       | Pittsburgh public schools:
-      
+
       table
-        tr 
+        tr
           td Since Kindergarten
           td.perc 100%
-        tr 
-          td Since 1st, 2nd, 3rd, 4th, or 5th Grade 
+        tr
+          td Since 1st, 2nd, 3rd, 4th, or 5th Grade
           td.perc 95%
-        tr 
-          td Since 6th, 7th, or 8th Grade 
+        tr
+          td Since 6th, 7th, or 8th Grade
           td.perc 85%
-        tr 
-          td Since 9th Grade 
+        tr
+          td Since 9th Grade
           td.perc 75%
-        tr 
+        tr
           td Since 10th, 11th, or 12th Grade
           td.perc 0%
 
-      | For students graduating from high school in 2013, the maximum yearly 
+      | For students graduating from high school in 2013, the maximum yearly
       | gift while in college is $20,000. The minimum gift is $1,000.
 
 
     .clear
 
     #years-in-pps
-      h3 
-        div Years in Pittsburgh Public Schools 
+      h3
+        div Years in Pittsburgh Public Schools
 
-      label(for="years") I've been in Pittsburgh public schools since 
-      select(name="years").years
+      label(for="years") I've been in Pittsburgh public schools since
+      select(name="years")#years
         option(value="1", selected=true) Kindergarten
         option(value="0.95") 1st Grade
         option(value="0.95") 2nd Grade
@@ -59,19 +59,19 @@ block content
       .
 
     #actual
-      h3 
+      h3
         div Yearly College Expenses
       .control-group
         label(for="tuition") Tuition and Fees
         input(type="text", name="tuition", value=0)#tuition
       .control-group
         label(for="board") Room and Board
-        input(type="text", name="board", value=0)#board      
+        input(type="text", name="board", value=0)#board
       .control-group
         label(for="books") Books
         input(type="text", name="books", value=0)#books
 
-      h3 
+      h3
         div Yearly Student Aid
       .control-group
         label(for="government") Government
@@ -81,30 +81,31 @@ block content
         input(type="text", name="institutional", value=0)#institutional
       .control-group
         label(for="scholarship") Scholarships
-        input(type="text", name="scholarship", value=0)#scholarship        
+        input(type="text", name="scholarship", value=0)#scholarship
 
       h3
         div Yearly Award
       .control-group
         label Total Cost
-        span
+        span#total
       .control-group
-        label We'll Give You 
-        span
+        label We'll Give You
+        span#give
       .control-group
         label You Still Need
-        span
+        span#owe
+      button#submit Calculate
 
     #examples
       h5 Examples
       #community-college.example
-        h4 
+        h4
           div Community College
 
         .eg
           | 4,000
         .eg
-          | - 
+          | -
         .eg
           | 1,000
 
@@ -124,7 +125,7 @@ block content
 
 
       #state-school.example
-        h4 
+        h4
           div State School
 
         .eg
@@ -149,7 +150,7 @@ block content
           | 10,000
 
       #private-college.example.last
-        h4 
+        h4
           div Private College
 
         .eg
@@ -177,4 +178,4 @@ block content
 
     .clear
 
-script(src="/js/validate.js")
+  script(src="/js/validate.js")

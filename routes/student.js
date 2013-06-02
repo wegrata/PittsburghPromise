@@ -4,26 +4,6 @@ var app = require("../app")
   , Db = require("mongodb").Db
   , Server = require("mongodb").Server;
 
-function getStudentData(studentId, callback){
-    var dsn = app.App.settings.dsn;
-    var c = app.App.settings.collection;
-    Db.connect(dsn, function(err, db){
-        if (err){
-          callback(err, null);
-        }else{
-            var collection = db.collection(c);
-            collection.findOne({"studentId": studentId},
-                               {raw: true}, function(err, item){
-                if(err || !item){
-                  callback("InvalidStudent", null);
-                }else{
-                    callback(null, item);
-                }
-            });
-        }
-    });
-}
-
 exports.eligibility = function(req, res){
   res.render('eligibility', { title: 'Eligibility' });
 };
@@ -37,6 +17,7 @@ function calculateContributionForYears(years){
   return promiseContribution * percent;
 }
 exports.calculate = function(req, res){
+  console.log(req.body);
   var tuition = parseFloat(req.body.tuition);
   var board = parseFloat(req.body.board);
   var books = parseFloat(req.body.books);
@@ -47,7 +28,7 @@ exports.calculate = function(req, res){
   var totalAid = government + institutional + scholarship;
   var promiseContribution = calculateContributionForYears(req.body.years);
   var unmetNeed = totalCost - totalAid;
-  console.log(unmetNeed - promiseContribution);
+  console.log(promiseContribution);
   if(unmetNeed === 0){
     promiseContribution = 0;
   }
@@ -60,11 +41,18 @@ exports.calculate = function(req, res){
   }else{
     unmetNeed -= promiseContribution;
   }
-  res.render('calculate', { title: 'Calculate Student Cost',
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.write(JSON.stringify({
                             totalCost: totalCost,
                             promiseContribution: promiseContribution,
                             studentContribution: unmetNeed
-                          });
+                          }));
+  res.end();
+  // res.render('calculate', { title: 'Calculate Student Cost',
+  //                           totalCost: totalCost,
+  //                           promiseContribution: promiseContribution,
+  //                           studentContribution: unmetNeed
+  //                         });
 };
 
 exports.apply = function(req, res){
