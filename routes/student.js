@@ -29,7 +29,7 @@ exports.eligibility = function(req, res){
 };
 
 exports.calculator = function(req, res){
-    res.render('calculator', { title: 'Calculate Student Cost', studentId: req.params.studentId});
+    res.render('calculator', { title: 'How much will I get?', studentId: req.params.studentId});
 };
 function calculateContributionForYears(years){
   var promiseContribution = 10000;
