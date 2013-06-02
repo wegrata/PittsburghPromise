@@ -17,23 +17,25 @@ function calculate(data){
   var totalAid = government + institutional + scholarship;
   var promiseContribution = calculateContributionForYears(data.years);
   var unmetNeed = totalCost - totalAid;
+  var studentContribution = 0;
   console.log(promiseContribution);
   if(unmetNeed === 0){
     promiseContribution = 0;
   }
   else if((unmetNeed - promiseContribution) < 1000 && (unmetNeed - promiseContribution) > 0){
     promiseContribution = 1000;
-    unmetNeed -= 1000;
+    studentContribution = unmetNeed - 1000;
   }
   else if (promiseContribution > unmetNeed){
     promiseContribution = unmetNeed;
   }else{
-    unmetNeed -= promiseContribution;
+    studentContribution = unmetNeed - promiseContribution;
   }
   return {
             totalCost: totalCost,
             promiseContribution: promiseContribution,
-            studentContribution: unmetNeed
+            studentContribution: studentContribution,
+            unmetNeed: unmetNeed
           };
 }
 function pullDataAndCalculate(){
@@ -50,6 +52,7 @@ function pullDataAndCalculate(){
 	$("#total").html(result.totalCost);
 	$("#give").html(result.promiseContribution);
 	$("#owe").html(result.studentContribution);
+  $("#unmet").html(result.unmetNeed);
 }
 $(document).ready(function(){
 	var textFields = $(":text");
