@@ -32,7 +32,8 @@ function SendMessage(phoneNumber, callback) {
   client.sendSms({
      to: '+'+phoneNumber,
      from: process.env.number,
-     body: "Get your ass to school so you don't miss out on Pittsburgh Promise"
+     body: "Get your ass to school so you don't " +
+           "miss out on Pittsburgh Promise!"
   }, function(err, responseData){
     callback(responseData);
     console.log(err);
