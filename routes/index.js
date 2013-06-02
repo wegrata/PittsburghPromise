@@ -25,6 +25,8 @@ exports.subscribeToAlert = function(req, res){
 
 
 
+
+
 function SendMessage(phoneNumber, callback) {
   // Build the post string from an object
   var client = new twilio.RestClient(process.env.sid,
