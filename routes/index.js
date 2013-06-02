@@ -22,11 +22,6 @@ exports.subscribeToAlert = function(req, res){
   }, 5000);
 
 };
-
-
-
-
-
 function SendMessage(phoneNumber, callback) {
   // Build the post string from an object
   var client = new twilio.RestClient(process.env.sid,
