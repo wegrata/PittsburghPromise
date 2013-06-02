@@ -154,7 +154,8 @@ html
 
 #u306
 {
-	width: 66px;
+	width: 86px;
+	padding-left: 10px;
 	padding-bottom: 33px;
 }
 
@@ -1126,11 +1127,12 @@ html
 
 #u518
 {
-	width: 76px;
+	width: 86px;
 	border-style: none;
 	border-color: transparent;
 	background-color: #FFFFFF;
 	padding-bottom: 33px;
+	padding-left: 10px;
 	position: relative;
 }
 
