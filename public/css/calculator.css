@@ -57,8 +57,10 @@ h4 div {
 
 #calculator {
     text-align: center;
-    width: 960px;
+    width: 700px;
     margin: 0 auto;
+    position: relative;
+    left: 20%;
 }
 #years-in-pps {
     margin: 36px auto 0;
@@ -141,7 +143,7 @@ select {
 }
 .example {
     float: left;
-    width: 196px;
+    width: 130px;
     margin-right: 20px;
 }
 .example.last {
