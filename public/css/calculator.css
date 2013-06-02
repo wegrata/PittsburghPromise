@@ -1,0 +1,155 @@
+h1 {
+    font: italic normal 36px/36px serif;
+    text-align: center;
+    margin: 36px 0 36px;
+    border-bottom: 1px solid black;
+}
+h1 div {
+    display: inline-block;
+    padding: 5px;
+    background: white;
+    position: relative;
+    bottom: -24px;
+}
+h3 {
+    font: italic normal 18px/18px serif;
+    text-align: center;
+    margin: 0 0 18px;
+    border-bottom: 1px solid black;
+}
+h3 div {
+    display: inline-block;
+    padding: 5px;
+    background: white;
+    position: relative;
+    bottom: -13px;
+}
+h4 {
+    font: italic normal 12px/12px serif;
+    text-align: center;
+    margin: 0 0 18px;
+    border-bottom: 1px solid black;
+}
+h4 div {
+    display: inline-block;
+    padding: 5px;
+    background: white;
+    position: relative;
+    bottom: -11px;
+}
+
+
+#prose {
+    width: 460px;
+    text-align: left;
+    margin: 0 auto;
+}
+#prose table {
+    margin: 20px 0 20px 50px;
+}
+#prose .perc {
+    text-align: right;
+    padding-left: 10px;
+}
+
+#calculator {
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+}
+#years-in-pps {
+    margin: 36px auto 0;
+    width: 700px;
+}
+#actual {
+    text-align: left;
+    margin: 0 auto;
+    width: 240px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    padding-top: 4px;
+}
+#years-in-pps label {
+    display: inline;
+}
+.clear {
+    clear: both;
+}
+.control-group label {
+    font-weight: bold;
+    width: 140px;
+    display: block;
+    padding-top: 4px;
+}
+.amount {
+    position: absolute;
+    top: 0;
+    left: 176px;
+    width: 50px;
+    text-align: right;
+}
+.amount input {
+    width: 50px;
+    text-align: right;
+}
+.amount.calculated {
+    width: 57px;
+    padding-top: 4px;
+}
+select {
+    width: 120px;
+}
+.control-group {
+    position: relative;
+    clear: both;
+    height: 30px;
+    margin: 0 0 10px 0;
+}
+#actual {
+    margin: 30px 0 0;
+    float: left;
+}
+#examples {
+    background: #EFEFEF;
+    color: #777;
+    float: left;
+    padding: 0 10px;
+    margin: 36px 0 0 10px;
+    position: relative;
+}
+#examples h5 {
+    text-transform: uppercase;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font: normal 10px/10px open-sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #999;
+
+}
+#examples h4 {
+    border-color: #EFEFEF;
+}
+#examples h4 div {
+    background: #EFEFEF;
+}
+.example {
+    float: left;
+    width: 130px;
+    margin-right: 20px;
+}
+.example.last {
+    margin-right: 0px;
+}
+.eg {
+    font: normal 14px/20px open-sans, sans-serif;
+    height: 30px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+.eg.leader {
+    margin-top: 52px;
+}
