@@ -1,13 +1,20 @@
 extends layout
 
+block head
+  link(rel='stylesheet', type='text/css', href='muse/css/eligibility.css')
+
 block content
   link(rel='stylesheet', type='text/css', href='/css/calculator.css')
 
-  #calculator
-
-    h1
-      div= title
-
+  #u580.museBGSize.browser_width.colelem
+    // group
+    #u580_align_to_page.clearfix
+      #u581-4.clearfix.grpelem
+        // content
+        p How much will I get?
+  #u720.browser_width.colelem
+    // BLUE AREA
+    
     #prose
 
       | We'll pay for a percentage of qualifying expenses (less student aid)
@@ -34,8 +41,13 @@ block content
       | For students graduating from high school in 2013, the maximum yearly
       | gift while in college is $20,000. The minimum gift is $1,000.
 
-
-    .clear
+  a#u718.nonblock.nontext.anim_swing.colelem(href='eligibility.html#eligibility')
+    // image
+    img#u718_img.block(src='/muse/images/down_arrow.png', alt='', width='51', height='26')
+  
+  a#eligibility.anchor_item.colelem
+  .clearfix.colelem
+    // WHITE AREA
 
     #years-in-pps
       h3
@@ -193,3 +205,10 @@ block content
     .clear
 
   script(src="/js/validate.js").
+
+
+
+  #u595-4.clearfix.colelem
+  #u607.browser_width.colelem
+  script(src="/js/subscribe.js").
+
