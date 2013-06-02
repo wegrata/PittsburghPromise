@@ -18,16 +18,16 @@ function calculate(data){
   var promiseContribution = calculateContributionForYears(data.years);
   var unmetNeed = totalCost - totalAid;
   var studentContribution = 0;
-  console.log(promiseContribution);
   if(unmetNeed === 0){
     promiseContribution = 0;
   }
-  else if((unmetNeed - promiseContribution) < 1000 && (unmetNeed - promiseContribution) > 0){
-    promiseContribution = 1000;
-    studentContribution = unmetNeed - 1000;
-  }
   else if (promiseContribution > unmetNeed){
-    promiseContribution = unmetNeed;
+    if (unmetNeed < 1000){
+      promiseContribution = 1000;
+      studentContribution = unmetNeed - promiseContribution;
+    }else{
+      promiseContribution = unmetNeed;
+    }
   }else{
     studentContribution = unmetNeed - promiseContribution;
   }
