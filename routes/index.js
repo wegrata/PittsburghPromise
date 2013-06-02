@@ -16,9 +16,14 @@ exports.subscribe = function(req, res){
 };
 exports.subscribeToAlert = function(req, res){
   setTimeout(function(){
-    SendMessage(req.body.phoneNumber, function(result){
-      res.render("subscribed", result);
-    });
+    try {
+        SendMessage(req.body.phoneNumber, function(result){
+          res.writeHead(200, {"Content-Type": "application/json"});
+          res.end(JSON.stringify({"success": true}));
+        });
+    } catch (err) {
+      console.log(err);
+    }
   }, 5000);
 
 };
@@ -35,8 +40,7 @@ function SendMessage(phoneNumber, callback) {
      body: "Get your ass to school so you don't " +
            "miss out on Pittsburgh Promise!"
   }, function(err, responseData){
-    callback(responseData);
     console.log(err);
-    console.log(responseData);
+    callback(responseData);
   });
 }

@@ -1,10 +1,30 @@
 extends layout
 
+block head
+  link(rel='stylesheet', type='text/css', href='muse/css/eligibility.css')
+
 block content
-  h1(style="padding-top:50px;") Pittsburgh Promise Reminders
-  form(action="/subscribe", method="POST")
-    .control-group
-      label(for="phoneNumber") What's your cell?
-      input(name="phoneNumber", type="text")#phoneNumber
-      br
-      input(type="submit", value="Subscribe").btn
+  #u580.museBGSize.browser_width.colelem
+    // group
+    #u580_align_to_page.clearfix
+      #u581-4.clearfix.grpelem
+        // content
+        p Sign up for reminders
+  #u720.browser_width.colelem
+    #subscribe-form
+      form(action="/subscribe", method="POST")
+        .control-group
+          label(for="phoneNumber") What's your cell?
+          input#phoneNumber(name="phoneNumber", type="text")#phoneNumber
+          br
+          input#subscribeButton(type="submit", value="Subscribe").btn
+  a#u718.nonblock.nontext.anim_swing.colelem(href='eligibility.html#eligibility')
+    // image
+    img#u718_img.block(src='/muse/images/down_arrow.png', alt='', width='51', height='26')
+  
+  a#eligibility.anchor_item.colelem
+  #u594-4.clearfix.colelem
+    // content
+  #u595-4.clearfix.colelem
+  #u607.browser_width.colelem
+  script(src="/js/subscribe.js").
