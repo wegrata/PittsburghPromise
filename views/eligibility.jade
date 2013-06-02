@@ -1,5 +1,8 @@
 extends layout
 
+block head
+  link(rel='stylesheet', type='text/css', href='muse/css/eligibility.css')
+
 block content
   #u580.museBGSize.browser_width.colelem
     // group
@@ -68,7 +71,7 @@ block content
           p GOAL
   a#u718.nonblock.nontext.anim_swing.colelem(href='eligibility.html#eligibility')
     // image
-    img#u718_img.block(src='images/down_arrow.png', alt='', width='51', height='26')
+    img#u718_img.block(src='/muse/images/down_arrow.png', alt='', width='51', height='26')
   a#eligibility.anchor_item.colelem
   #u594-4.clearfix.colelem
     // content
