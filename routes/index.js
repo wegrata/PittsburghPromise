@@ -32,7 +32,7 @@ function SendMessage(phoneNumber, callback) {
      from: '+17245364880',
      body: "Get your ass to school so you don't miss out on Pittsburgh Promise"
   }, function(err, responseData){
-    result(responseData);
+    callback(responseData);
     console.log(err);
     console.log(responseData);
   });
