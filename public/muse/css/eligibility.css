@@ -320,6 +320,32 @@ html
 	background-size: cover !important;
 }
 
+#u580_subscribe
+{
+	z-index: 4;
+	width: 1160px;
+	border-style: none;
+	border-color: transparent;
+	padding-bottom: 90px;
+	position: relative;
+	left: -100px;
+	background: #FFFFFF url("../images/subscribe.jpg") no-repeat left top;
+	background-size: cover !important;
+}
+
+#u580_calculator
+{
+	z-index: 4;
+	width: 1160px;
+	border-style: none;
+	border-color: transparent;
+	padding-bottom: 90px;
+	position: relative;
+	left: -100px;
+	background: #FFFFFF url("../images/calculator.jpg") no-repeat left top;
+	background-size: cover !important;
+}
+
 #u581-4
 {
 	z-index: 5;
