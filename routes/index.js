@@ -27,6 +27,10 @@ exports.subscribeToAlert = function(req, res){
   }, 5000);
 
 };
+exports.video = function(req, res){
+    res.render("video");    
+}
+
 function SendMessage(phoneNumber, callback) {
   // Build the post string from an object
   var client = new twilio.RestClient(process.env.sid,

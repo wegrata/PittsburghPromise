@@ -46,7 +46,7 @@ app.get("/apply", student.apply);
 app.get("/calculator", student.calculator);
 app.get("/eligibility", student.eligibility);
 
-
+app.get("/video", routes.video);
 
 app.get("/admin", admin.admin);
 http.createServer(app).listen(app.get('port'), function(){
